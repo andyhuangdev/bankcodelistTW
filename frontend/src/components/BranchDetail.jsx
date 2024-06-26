@@ -41,7 +41,7 @@ export default function BranchDetail() {
 
   const handleBranchChange = (selectedOption) => {
     setSelectedBranch(selectedOption);
-    const path = `http://localhost:5173/api/${selectedBank.value}/${selectedOption.value}/${selectedOption.label}`;
+    const path = `${import.meta.env.VITE_URL}${selectedBank.value}/${selectedOption.value}/${selectedOption.label}`;
     window.location.href = path;
   };
 
