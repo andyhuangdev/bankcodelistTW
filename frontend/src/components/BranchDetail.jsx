@@ -14,7 +14,9 @@ export default function BranchDetail() {
   const [selectedBranch, setSelectedBranch] = useState(null);
 
   const fetchBranchDetail = async (bankCode, branchCode, branchName) => {
-    const response = await axios.get(`${import.meta.env.VITE_API_URL}${bankCode}/${branchCode}/${branchName}/`);
+    const response = await axios.get(
+      `${import.meta.env.VITE_API_URL}${bankCode}/${branchCode}/${branchName}/`
+    );
     setBranchDetail(response.data.branch);
     setBranches(response.data.branches || []);
     setAllBanks(response.data.banks || []);
@@ -41,7 +43,9 @@ export default function BranchDetail() {
 
   const handleBranchChange = (selectedOption) => {
     setSelectedBranch(selectedOption);
-    const path = `${import.meta.env.VITE_URL}${selectedBank.value}/${selectedOption.value}/${selectedOption.label}`;
+    const path = `${import.meta.env.VITE_URL}${selectedBank.value}/${
+      selectedOption.value
+    }/${selectedOption.label}`;
     window.location.href = path;
   };
 

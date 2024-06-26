@@ -48,10 +48,10 @@ export default function Index() {
   return (
     <div className=" flex flex-col justify-center items-center space-y-4 w-full md:w-[960px]">
       <h1 className="text-white">台灣銀行代碼查詢</h1>
-      <div >
+      <div>
         <label className="text-white">銀行名稱：</label>
         <Select
-        className="w-[300px]"
+          className="w-[300px]"
           options={banks}
           value={selectedBank}
           onChange={handleBankChange}
@@ -61,7 +61,7 @@ export default function Index() {
       <div>
         <label className="text-white">分行名稱：</label>
         <Select
-        className="w-[300px]"
+          className="w-[300px]"
           options={branches}
           value={selectedBranch}
           onChange={handleBranchChange}

@@ -26,6 +26,6 @@ dist-ssr
 
 data.csv
 import.py
-
+**/__pycache__
 
 .env
